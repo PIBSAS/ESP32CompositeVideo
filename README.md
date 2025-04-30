@@ -84,3 +84,5 @@ if you attribute me. Keep the spirit alive :-)
       ``#include "soc/i2s_reg.h"``
 
     - 166 ``.communication_format = I2S_COMM_FORMAT_I2S_MSB`` -> ``.communication_format = I2S_COMM_FORMAT_STAND_I2S`` [I2S_COMM_FORMAT_I2S_MSB -> I2S_COMM_FORMAT_STAND_I2S]
+
+---
