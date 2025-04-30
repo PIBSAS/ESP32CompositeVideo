@@ -7,7 +7,10 @@
 
 #include "luni.h"
 #include "font6x8.h"
-
+//only for PlatformIO
+#ifdef PLATFORMIO
+#include <Arduino.h>
+#endif
 //PAL MAX, half: 324x268 full: 648x536
 //NTSC MAX, half: 324x224 full: 648x448
 const int XRES = 320;
