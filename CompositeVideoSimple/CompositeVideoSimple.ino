@@ -1,4 +1,7 @@
 //code by bitluni (send me a high five if you like the code)
+#ifdef ARDUINO
+#include <Arduino.h>
+#endif
 #include "esp_pm.h"
 
 #include "CompositeGraphics.h"
@@ -7,10 +10,7 @@
 
 #include "luni.h"
 #include "font6x8.h"
-//only for PlatformIO
-#ifdef PLATFORMIO
-#include <Arduino.h>
-#endif
+
 //PAL MAX, half: 324x268 full: 648x536
 //NTSC MAX, half: 324x224 full: 648x448
 const int XRES = 320;
