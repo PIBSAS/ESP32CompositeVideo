@@ -1,6 +1,7 @@
 #pragma once
 #include "Font.h"
 #include "TriangleTree.h"
+#include <algorithm>
 
 class CompositeGraphics
 { 
@@ -64,7 +65,7 @@ class CompositeGraphics
     cursorY = y;  
   }
   
-  void print(char *str)
+  void print(const char *str)
   {
     if(!font) return;
     while(*str)
@@ -125,7 +126,7 @@ class CompositeGraphics
   inline void dotAdd(int x, int y, char color)
   {
     if((unsigned int)x < xres && (unsigned int)y < yres)
-      backbuffer[y][x] = min(54, color + backbuffer[y][x]);
+      backbuffer[y][x] = std::min(54, color + backbuffer[y][x]);
   }
   
   inline char get(int x, int y)
