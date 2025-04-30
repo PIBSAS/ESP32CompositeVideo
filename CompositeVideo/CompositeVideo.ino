@@ -1,4 +1,7 @@
 //code by bitluni (send me a high five if you like the code)
+#ifdef ARDUINO
+#include <Arduino.h>
+#endif
 #include "esp_pm.h"
 
 //#define SKULL
