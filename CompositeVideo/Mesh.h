@@ -1,5 +1,6 @@
 #pragma once
 #include "Matrix.h"
+#include <algorithm>
 
 template<class Graphics>
 class Mesh
@@ -64,7 +65,7 @@ class Mesh
 
           const float L[3] = { 0, 0, -1 }; 
           
-          const float NdotL = max(0.0f, nx * L[0] + ny * L[1] + nz * L[2]);
+          const float NdotL = std::max(0.0f, nx * L[0] + ny * L[1] + nz * L[2]);
           c = (char) (color * NdotL + 0.5);
         }
         else
