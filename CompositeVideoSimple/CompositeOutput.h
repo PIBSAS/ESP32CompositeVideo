@@ -1,5 +1,6 @@
 #pragma once
 #include "driver/i2s.h"
+#include "soc/i2s_reg.h"
 
 typedef struct
 {
@@ -162,7 +163,7 @@ class CompositeOutput
        .sample_rate = 1000000,  //not really used
        .bits_per_sample = (i2s_bits_per_sample_t)I2S_BITS_PER_SAMPLE_16BIT, 
        .channel_format = I2S_CHANNEL_FMT_ONLY_RIGHT,
-       .communication_format = I2S_COMM_FORMAT_I2S_MSB,
+       .communication_format = I2S_COMM_FORMAT_STAND_I2S,
        .intr_alloc_flags = ESP_INTR_FLAG_LEVEL1,
        .dma_buf_count = 2,
        .dma_buf_len = samplesLine  //a buffer per line
